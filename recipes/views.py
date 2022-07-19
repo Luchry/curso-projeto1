@@ -17,6 +17,8 @@ def about(request):
 
 def contact(request):
 
-    return HttpResponse('CONTACT')
+    return render(request, 'recipes/contact.html', context={
+        'telefone': '13997861119',
+    })
 
 # Create your views here.
