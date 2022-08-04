@@ -1,53 +1,16 @@
-{% include 'recipes/partials/head.html'%}
+{% extends 'global/base.html' %}
 
-<body>
-    <header class="main-header-container">
-        <div class = "main-header container">
-            <h1>
-                <a class="main-logo" href="/">
-                    <i class="fa-solid fa-ghost main-logo-icon"></i> 
-                    <span class="main-logo-text">Recipes</span>
-                </a>
-            </h1>
-        </div>  
+{% block title %} {% endblock title %} 
 
-    </header>
 
-    <div class="search-container">
-        <div class="container">
-            <form action="" class="search-form">
-                <input class="search-input" type="sarch-input" name="search">
-                <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
-            </form>
-        </div>
-    </div>  
-
-    <main class="main-content-container">
-        <div class="main-content main-content-list container">
-
-           {% include 'recipes/partials/recipes.html' %}
-           {% include 'recipes/partials/recipes.html' %}
-           {% include 'recipes/partials/recipes.html' %}
-           {% include 'recipes/partials/recipes.html' %}
-           {% include 'recipes/partials/recipes.html' %}
-           {% include 'recipes/partials/recipes.html' %}
-                       
-        </div>
-    </main>
-
-    <footer class="footer-content content">
-        <div class="footer-text">
-            <a href="https://www.google.com.br" target="_blank" rel="noreferrer">
-            By Lucas Soares</a>
-        </div>
-
-        <div class="powered">
-            <a href="http://eelslap.com/" target="_blank" rel="noreferrer">
-                Powered by Django</a>
-        </div>
-    </footer>
-
-        
+{% block content %}
+<div class="main-content main-content-list container">
+        {% include 'recipes/partials/recipes.html' %}
+        {% include 'recipes/partials/recipes.html' %}
+        {% include 'recipes/partials/recipes.html' %}
+        {% include 'recipes/partials/recipes.html' %}
+        {% include 'recipes/partials/recipes.html' %}
+        {% include 'recipes/partials/recipes.html' %}
+</div>                    
+{% endblock content %}
    
-</body>
-</html>
